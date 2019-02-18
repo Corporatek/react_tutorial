@@ -1,5 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Kelechi's first react study
+
+### installation link: 
+
+https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
+
+### video tutorial link: 
+
+https://www.youtube.com/watch?v=DLX62G4lc44&t=852s
+
+-2/17 stopped at 24 min mark
+
+----
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +81,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
