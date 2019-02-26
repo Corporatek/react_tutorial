@@ -47,3 +47,8 @@ code {
     0 20px -9px rgba(0, 0,0, 0, 0.15);
     padding: 30px;
 }
+
+.contact-card {
+
+  background-color: white;
+}
