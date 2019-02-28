@@ -12,11 +12,11 @@ function Joke(props) {
         )
         
     } else {
-        let joke = "I worked"
-
-//    console.log(joke)
-        return(joke)
-
+        return(
+            <div>
+                <p>{props.joke.answer}</p>
+            </div>            
+        )
     }
 }
 

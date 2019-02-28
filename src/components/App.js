@@ -16,7 +16,9 @@ function App() {
       <Joke
         joke={{question: "Joke", answer: "LOL"}}
       />
-     
+      <Joke
+        joke={{answer: "LOL"}}
+      />
     </div>
   )
 }
