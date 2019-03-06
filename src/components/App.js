@@ -1,5 +1,5 @@
 import React from "react";
-import {Component} from "react"
+// import {Component} from "react"
 import '../App.css';
 
 // }
@@ -7,52 +7,28 @@ import '../App.css';
 
 
 class App extends React.Component {
-
-  render() {        
-    return (
-      <div>
-        <Header username="Kelechi"/>      
-        <Greeting />      
-      </div>
-    )
+  constructor() {
+    super()
+    this.state = {
+      isLoggedIn: false,
+    }
   }
-}
+render() {
+  let logStatus
 
-class Header extends React.Component {
-  render() {
-    return (
-        <header>
-          <p>Welcome, {this.props.username}!</p> 
-        </header>
-    )
-  }
-}
-
-
-// Notice how the below class component does not containt "React" before "Component"
-class Greeting extends Component {
-
-  render() {
-
-  var date = new Date()
-  var hours = date.getHours()
-  let timeOfDay
-
-  if (hours < 12) {
-    timeOfDay = "morning"
-  } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "afternoon"
+  if (this.state.isLoggedIn === true) {
+    logStatus = "in"
   } else {
-    timeOfDay = "night"
+    logStatus = "out"
   }
 
-    return (
-      <h1>
-        Good {timeOfDay} to you, sir or madam!
-      </h1>
-    )
-  }
+  return (
+    <div>
+      <h1>You are currently logged {logStatus}</h1>
+    </div>
+
+  )
 }
-
+}
 
 export default App;
