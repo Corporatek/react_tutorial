@@ -1,32 +1,58 @@
 import React from "react";
+import {Component} from "react"
 import '../App.css';
-// import Footer from "./Footer"
-// import Header from "./Header"
-// import MainContent from "./MainContent"
 
-import ToDoItem from "./ToDoItem"
-import ToDoData from "./ToDoData"
+// }
 
-// import Joke from "./Joke"
-// import ContactCard from "./ContactCard"
 
-// import Product from "./Product";
-// import productData from "./vschoolProducts"
 
-// Alternatively you can use an arrow function which does not require the return keyword
+class App extends React.Component {
 
-function App() {
-
-const ToDoList = ToDoData.map(item =>
-<ToDoItem key={item.id} item={item} />)
-
-  return (
-    <div className="todo-list">
-    <h1>To Do List...</h1>
-      <hr></hr>
-        {ToDoList}
-    </div>
-  )
+  render() {        
+    return (
+      <div>
+        <Header username="Kelechi"/>      
+        <Greeting />      
+      </div>
+    )
+  }
 }
+
+class Header extends React.Component {
+  render() {
+    return (
+        <header>
+          <p>Welcome, {this.props.username}!</p> 
+        </header>
+    )
+  }
+}
+
+
+// Notice how the below class component does not containt "React" before "Component"
+class Greeting extends Component {
+
+  render() {
+
+  var date = new Date()
+  var hours = date.getHours()
+  let timeOfDay
+
+  if (hours < 12) {
+    timeOfDay = "morning"
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "afternoon"
+  } else {
+    timeOfDay = "night"
+  }
+
+    return (
+      <h1>
+        Good {timeOfDay} to you, sir or madam!
+      </h1>
+    )
+  }
+}
+
 
 export default App;
