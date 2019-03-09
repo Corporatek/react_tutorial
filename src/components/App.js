@@ -1,6 +1,8 @@
 import React from "react";
 // import {Component} from "react"
 import '../App.css';
+import ToDoItem from "./ToDoItem"
+import ToDoData from "./ToDoData"
 
 // }
 
@@ -10,21 +12,18 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: false,
+      todos: ToDoData
     }
   }
-render() {
-  let logStatus
 
-  if (this.state.isLoggedIn === true) {
-    logStatus = "in"
-  } else {
-    logStatus = "out"
-  }
+render() {
+ const ToDoItems = this.state.todos.map(item => <ToDoItem key={item.id} item={item} />)
 
   return (
-    <div>
-      <h1>You are currently logged {logStatus}</h1>
+    <div className="todo-list">
+      <hr></hr>
+        {ToDoItems}
+      <hr></hr>
     </div>
 
   )

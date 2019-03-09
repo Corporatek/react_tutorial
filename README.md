@@ -12,7 +12,9 @@ https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
 https://www.youtube.com/watch?v=DLX62G4lc44&t=852s
 
 -2/17 stopped at 24 min mark
--2/24 stopped at 1 hr 14 min (730PM - 10:45PM) -2/27 stopped at 1 hr 58 min (3 hrs)
+-2/24 stopped at 1 hr 14 min (730PM - 10:45PM) 
+-2/27 stopped at 1 hr 58 min (3 hrs)
+-3/5 stopped at 2 hours and 20 min (10:45 - 12:30)
 
 ----
 
