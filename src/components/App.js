@@ -1,45 +1,48 @@
 import React from "react";
 // import {Component} from "react"
 import '../App.css';
-// import ToDoItem from "./ToDoItem"
-// import ToDoData from "./ToDoData"
+import ToDoItem from "./ToDoItem"
+import ToDoData from "./ToDoData"
 
 // }
-
 
 
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      // todos: ToDoData
-        count: 0
+      todos: ToDoData
     }
-    // below binds the handleClick method to the class
-    this.handleClick = this.handleClick.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-handleClick() {
-  this.setState(prevState => {
-      return {
-        count: prevState.count + 1
+handleChange(id){
+  this.setState((prevState) => {
+    const updatedTodos = prevState.todos.map(todo => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed
       }
+      return todo
+    })
+    return {
+      todos: updatedTodos
+    }
   })
+
+
 }
 
 render() {
-//  const ToDoItems = this.state.todos.map(item => <ToDoItem key={item.id} item={item} />)
-  return (
-    <div className="todo-list">
-      <hr></hr>
-        {/* {ToDoItems} */}
-      <hr></hr>
-      <h1>{this.state.count}</h1>
-      <button onClick={this.handleClick}>Change!</button>
-    </div>
+  // Below gives the components data the ability to react
+  const todolist = this.state.todos.map(item => <ToDoItem key={item.id} item={item} handleChange={this.handleChange}/>)
 
+  return(
+    <div className="todo-list">
+      {todolist}
+    </div>
   )
 }
+
 }
 
 export default App;
