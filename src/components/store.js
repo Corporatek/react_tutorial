@@ -23,6 +23,7 @@ handleChange(id){
     const updatedTodos = prevState.todos.map(todo => {
       if (todo.id === id) {
         todo.completed = !todo.completed
+        document.getElementById(todo.id, )
       }
       return todo
     })
@@ -37,6 +38,7 @@ handleChange(id){
 render() {
   // Below gives the components data the ability to react
   const todolist = this.state.todos.map(item => <ToDoItem key={item.id} item={item} handleChange={this.handleChange}/>)
+  
 
   return(
     <div className="todo-list">
